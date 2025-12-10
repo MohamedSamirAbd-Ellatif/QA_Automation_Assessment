@@ -1,0 +1,14 @@
+{
+    "newUser": {
+      "name": "Test User",
+      "password": "Password123!",
+      "firstName": "Test",
+      "lastName": "User",
+      "address": "123 Test St",
+      "country": "United States",
+      "state": "New York",
+      "city": "New York",
+      "zipcode": "10001",
+      "mobileNumber": "1234567890"
+    }
+  }

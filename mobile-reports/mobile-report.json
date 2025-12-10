@@ -1,0 +1,159 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-12-10T01:27:49.774Z",
+    "end": "2025-12-10T01:27:55.788Z",
+    "duration": 6014,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ebac5be0-257d-4977-b192-7eb4ac8e6dee",
+      "title": "",
+      "fullFile": "/home/seceng/QA-Assessment/mobile/specs/basic.spec.ts",
+      "file": "/mobile/specs/basic.spec.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0c42d9e7-c807-4518-83cb-3f93d74b8eee",
+          "title": "Task C: Mobile Automation (Android)",
+          "fullFile": "/home/seceng/QA-Assessment/mobile/specs/basic.spec.ts",
+          "file": "/mobile/specs/basic.spec.ts",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"Task C: Mobile Automation (Android)\"",
+              "fullTitle": "Task C: Mobile Automation (Android) \"before all\" hook in \"Task C: Mobile Automation (Android)\"",
+              "timedOut": false,
+              "duration": 3292,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver=await(0,import_webdriverio.remote)({logLevel:\"error\",path:\"/\",port:4723,capabilities:{platformName:\"Android\",\"appium:automationName\":\"UiAutomator2\",\"appium:deviceName\":\"Android Emulator\",\"appium:app\":path.join(process.cwd(),\"mobile/app/ApiDemos.apk\")}});homeScreen=new import_HomeScreen.HomeScreen(driver);accessibilityScreen=new import_AccessibilityScreen.AccessibilityScreen(driver)",
+              "err": {},
+              "uuid": "8e2695bf-649a-4328-a4b3-011943d13f30",
+              "parentUUID": "0c42d9e7-c807-4518-83cb-3f93d74b8eee",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"Task C: Mobile Automation (Android)\"",
+              "fullTitle": "Task C: Mobile Automation (Android) \"after all\" hook in \"Task C: Mobile Automation (Android)\"",
+              "timedOut": false,
+              "duration": 317,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if(driver){await driver.deleteSession()}",
+              "err": {},
+              "uuid": "3786542e-34cb-4bbc-ba0f-4cf961fb7dc4",
+              "parentUUID": "0c42d9e7-c807-4518-83cb-3f93d74b8eee",
+              "isHook": true,
+              "skipped": false
+            },
+            {
+              "title": "\"after each\" hook in \"Task C: Mobile Automation (Android)\"",
+              "fullTitle": "Task C: Mobile Automation (Android) \"after each\" hook in \"Task C: Mobile Automation (Android)\"",
+              "timedOut": false,
+              "duration": 0,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if(this.currentTest?.state===\"failed\"&&driver){const screenshotDir=\"./mobile-reports/screenshots\";if(!fs.existsSync(screenshotDir)){fs.mkdirSync(screenshotDir,{recursive:true})}const cleanTitle=this.currentTest.title.replace(/\\s+/g,\"_\");await driver.saveScreenshot(`${screenshotDir}/${cleanTitle}.png`);console.log(`\nScreenshot saved: ${screenshotDir}/${cleanTitle}.png`)}",
+              "err": {},
+              "uuid": "de76878b-381f-4a23-9a6e-35d9376358c7",
+              "parentUUID": "0c42d9e7-c807-4518-83cb-3f93d74b8eee",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "should navigate to Accessibility screen and verify element",
+              "fullTitle": "Task C: Mobile Automation (Android) should navigate to Accessibility screen and verify element",
+              "timedOut": false,
+              "duration": 2389,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await homeScreen.openAccessibility();const isVisible=await accessibilityScreen.isNodeProviderVisible();(0,import_chai.expect)(isVisible).to.be.true",
+              "err": {},
+              "uuid": "a8050290-c1f2-4d58-ba96-ed0278fd025f",
+              "parentUUID": "0c42d9e7-c807-4518-83cb-3f93d74b8eee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a8050290-c1f2-4d58-ba96-ed0278fd025f"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2389,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.7.5"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mobile-report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "mobile-reports",
+        "reportFilename": "mobile-report"
+      },
+      "version": "6.3.2"
+    }
+  }
+}
